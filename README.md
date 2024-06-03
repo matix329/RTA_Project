@@ -29,11 +29,11 @@ Skrypt `consumer_crypto.py` wczytuje dane kryptowalutowe z pliku `crypto_data.cs
 
 ## Nowe kolumny
 
-1. **volatility**:
-   - Różnica między najwyższą a najniższą ceną w ciągu 24 godzin.
+**volatility**:
+Różnica między najwyższą a najniższą ceną w ciągu 24 godzin.
 
-2. **market_cap_to_volume**:
-   - Stosunek kapitalizacji rynkowej do wolumenu obrotu.
+**market_cap_to_volume**:
+Stosunek kapitalizacji rynkowej do wolumenu obrotu.
 
-3. **current_price_to_ath**:
-   - Stosunek aktualnej ceny do najwyższej ceny wszech czasów (ATH).
+**current_price_to_ath**:
+Stosunek aktualnej ceny do najwyższej ceny wszech czasów (ATH).

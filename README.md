@@ -1,6 +1,6 @@
 # RTA_Project
 
-Skrypt consumer.py przetwarza dane giełdowe zapisane w pliku CSV (stock_data.csv) i generuje przetworzone dane, które są zapisywane w nowym pliku CSV (processed_stock_data.csv). Skrypt dodaje kilka nowych kolumn, które ułatwiają analizę danych akcji na przestrzeni czasu.
+Skrypt consumer_stock.py przetwarza dane giełdowe zapisane w pliku CSV (stock_data.csv) i generuje przetworzone dane, które są zapisywane w nowym pliku CSV (processed_stock_data.csv). Skrypt dodaje kilka nowych kolumn, które ułatwiają analizę danych akcji na przestrzeni czasu.
 
 ### **Nowe Kolumny**
 

@@ -1,5 +1,6 @@
 # RTA_Project
-
+-------
+### Consumer_stock
 Skrypt consumer_stock.py przetwarza dane giełdowe zapisane w pliku CSV (stock_data.csv) i generuje przetworzone dane, które są zapisywane w nowym pliku CSV (processed_stock_data.csv). Skrypt dodaje kilka nowych kolumn, które ułatwiają analizę danych akcji na przestrzeni czasu.
 
 ### **Nowe Kolumny**
@@ -21,3 +22,18 @@ Stosunek bieżącej ceny zamknięcia do średniej ceny zamknięcia dla każdego 
 
 **cumulative_return:**
 Kumulatywny zwrot od początku danych do bieżącego dnia.
+
+------
+### Consumer_crypto
+Ten skrypt `consumer_crypto.py` wczytuje dane kryptowalutowe z pliku `crypto_data.csv`, dodaje nowe kolumny do analizy i zapisuje zmodyfikowane dane do nowego pliku `processed_crypto_data.csv`.
+
+## Nowe kolumny
+
+1. **volatility**:
+   - Różnica między najwyższą a najniższą ceną w ciągu 24 godzin.
+
+2. **market_cap_to_volume**:
+   - Stosunek kapitalizacji rynkowej do wolumenu obrotu.
+
+3. **current_price_to_ath**:
+   - Stosunek aktualnej ceny do najwyższej ceny wszech czasów (ATH).

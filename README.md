@@ -1,7 +1,7 @@
 # RTA_Project
 -------
 ### Consumer_stock
-Skrypt consumer_stock.py przetwarza dane giełdowe zapisane w pliku CSV (stock_data.csv) i generuje przetworzone dane, które są zapisywane w nowym pliku CSV (processed_stock_data.csv). Skrypt dodaje kilka nowych kolumn, które ułatwiają analizę danych akcji na przestrzeni czasu.
+Skrypt `consumer_stock.py` przetwarza dane giełdowe zapisane w pliku CSV (`stock_data.csv`) i generuje przetworzone dane, które są zapisywane w nowym pliku CSV (`processed_stock_data.csv`). Skrypt dodaje kilka nowych kolumn, które ułatwiają analizę danych akcji na przestrzeni czasu.
 
 ### **Nowe Kolumny**
 
@@ -25,7 +25,7 @@ Kumulatywny zwrot od początku danych do bieżącego dnia.
 
 ------
 ### Consumer_crypto
-Ten skrypt `consumer_crypto.py` wczytuje dane kryptowalutowe z pliku `crypto_data.csv`, dodaje nowe kolumny do analizy i zapisuje zmodyfikowane dane do nowego pliku `processed_crypto_data.csv`.
+Skrypt `consumer_crypto.py` wczytuje dane kryptowalutowe z pliku `crypto_data.csv`, dodaje nowe kolumny do analizy i zapisuje zmodyfikowane dane do nowego pliku `processed_crypto_data.csv`.
 
 ## Nowe kolumny
 

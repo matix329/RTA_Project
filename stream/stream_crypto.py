@@ -50,7 +50,8 @@ def fetch_crypto_data():
     sleep(10)
 
 if __name__ == "__main__":
-    SERVER = "localhost:9092"
+    SERVER = "localhost:29092"
+    TOPIC = "crypto"
     
     crypto_producer = KafkaProducer(
         bootstrap_servers=[SERVER],

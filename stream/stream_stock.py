@@ -9,7 +9,7 @@ from kafka import KafkaProducer
 
 
 def fetch_stock_data():
-    with open('/Users/matix329/Projekt_rta/stock_indexes.txt', 'r') as file:
+    with open('#Wklej link', 'r') as file:
         for line in file:
             symbol = line.strip()
             stock = yf.Ticker(symbol)

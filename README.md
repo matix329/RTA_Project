@@ -37,7 +37,7 @@ python3 stream_stock.py
 W nowym oknie terminala uruchom pliki `import_data_stock.py` oraz `import_data_crypto.py`.
 
 ```sh
-python3 python3 import_data_stock.py
+python3 import_data_stock.py
 ```
 
 **UWAGA**: Aby przerwać działanie tych procesów, użyj kombinacji klawiszy `Ctrl + C` (niezależnie od tego, czy używasz macOS, czy Windows).

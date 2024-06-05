@@ -1,4 +1,4 @@
-# RTA_Project
+# Opis nowych danych
 -------
 ### Stock
 Skrypt `import_data_stock.py` przetwarza dane giełdowe i generuje przetworzone dane, które są zapisywane w nowym pliku CSV (`processed_stock_data.csv`). Skrypt dodaje kilka nowych kolumn, które ułatwiają analizę danych akcji na przestrzeni czasu.

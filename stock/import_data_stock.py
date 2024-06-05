@@ -56,7 +56,7 @@ def consume_stock_data():
             print(f"Otrzymane dane: {stock_data}")
 
             # Przetwarzaj dane po każdym nowym rekordzie
-            process_stock_data(data, '/Users/matix329/Projekt_rta/processed_stock_data.csv')
+            process_stock_data(data, '#Wklej link')
         except Exception as e:
             print(f"Błąd podczas odbierania lub przetwarzania wiadomości: {e}")
 

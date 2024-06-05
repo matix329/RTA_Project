@@ -1,39 +1,43 @@
-# RTA_Project
--------
-### Stock
-Skrypt `import_data_stock.py` przetwarza dane giełdowe i generuje przetworzone dane, które są zapisywane w nowym pliku CSV (`processed_stock_data.csv`). Skrypt dodaje kilka nowych kolumn, które ułatwiają analizę danych akcji na przestrzeni czasu.
+## Instrukcja uruchomienia
 
-### **Nowe Kolumny**
+### Krok 1: 
+Uruchom aplikację Dockera.
 
-**price_change:**
-Procentowa zmiana ceny zamknięcia w stosunku do poprzedniego dnia dla każdego symbolu.
+### Krok 2: Uruchomienie kontenerów
 
-**average_price:**
-Umożliwia porównanie bieżącej ceny zamknięcia z średnią ceną zamknięcia.
+W terminalu (na macOS) lub w wierszu poleceń (na Windows), przejdź do katalogu, w którym znajduje się plik `docker-compose.yml`, a następnie uruchom poniższe polecenie:
 
-**price_to_average_ratio:**
-Stosunek bieżącej ceny zamknięcia do średniej ceny zamknięcia dla każdego symbolu.
+```sh
+docker-compose up -d
+```
 
-**rolling_mean:**
-7-dniowa średnia ruchoma ceny zamknięcia.
+**Uwaga**: Czasem mogą wystąpić problemy z kontenerem **_Kafka-UI_**. W takim przypadku konieczne może być kilkukrotne uruchomienie i zamknięcie kontenera, aby Kafka zaczęła działać poprawnie.
 
-**rolling_std:**
-7-dniowe odchylenie standardowe ceny zamknięcia.
+### Krok 3: Sprawdzenie działania Kafka UI
 
-**cumulative_return:**
-Kumulatywny zwrot od początku danych do bieżącego dnia.
+Po uruchomieniu kontenerów, Kafka UI będzie dostępne pod adresem: [http://localhost:8180](http://localhost:8180).
 
-------
-### Consumer_crypto
-Skrypt `import_data_stock.py` wczytuje dane kryptowalutowe i dodaje nowe kolumny do analizy i zapisuje zmodyfikowane dane do nowego pliku `processed_crypto_data.csv`.
+Możesz także uzyskać dostęp do Kafka UI poprzez link w aplikacji Docker.
 
-## Nowe kolumny
+### Krok 4: Sprawdzenie w Kafka UI
 
-**volatility**:
-Różnica między najwyższą a najniższą ceną w ciągu 24 godzin.
+Wejdź na Dashboard w Kafka UI i sprawdź, czy masz wgląd w klastery. Nas interesuje klaster o nazwie "local".
 
-**market_cap_to_volume**:
-Stosunek kapitalizacji rynkowej do wolumenu obrotu.
+Jeżeli jest dostępny, przejdź do zakładki "topics" i sprawdź, czy są tam dwa topiki: `crypto` i `stock`. To właśnie te topiki nas interesują, ponieważ tam będą logi z naszych operacji.
 
-**current_price_to_ath**:
-Stosunek aktualnej ceny do najwyższej ceny wszech czasów (ATH).
+### Krok 5: Uruchomienie streamów
+
+W terminalu przejdź do katalogu, w którym znajdują się pliki `stream_stock.py` oraz `stream_crypto.py`, a następnie uruchom je jeden obok drugiego za pomocą komendy:
+```sh
+python3 stream_stock.py
+```
+
+### Krok 6: Uruchomienie importu
+
+W nowym oknie terminala uruchom pliki `import_data_stock.py` oraz `import_data_crypto.py`.
+
+```sh
+python3 python3 import_data_stock.py
+```
+
+**UWAGA**: Aby przerwać działanie tych procesów, użyj kombinacji klawiszy `Ctrl + C` (niezależnie od tego, czy używasz macOS, czy Windows).

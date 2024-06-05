@@ -10,7 +10,7 @@ import yfinance as yf
 from kafka import KafkaProducer
 
 def fetch_crypto_data():
-    with open('/Users/matix329/Projekt_rta/crypto_index.txt', 'r') as file:
+    with open('#Wklej link', 'r') as file:
         ids = file.readlines()
         ids = [id.strip() for id in ids]
     
